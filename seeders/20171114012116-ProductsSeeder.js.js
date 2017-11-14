@@ -12,6 +12,15 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
+    return queryInterface.bulkInsert('Products', [{
+      product_name: 'Clothes',
+      description: 'Sweater',
+      imageURL: '../css/imgs/placeholder/sweater.jpg',
+      category: 'Other',
+      scaleRating: 5,
+      UsersId: 1,
+      swapStatus: 0
+    }], {});
   },
 
   down: (queryInterface, Sequelize) => {
@@ -22,5 +31,11 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
+
+
+    return (queryInterface, Sequelize){
+      return queryInterface.bulkDelete('Products', null, {truncate: true});
+  
+
   }
 };
