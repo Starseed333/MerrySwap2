@@ -19,6 +19,13 @@ $(document).ready(function(){
     }, 900);
 });
 
+// yonna about us
+$(".aboutUs").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#page-footer").offset().top
+    }, 900);
+});
+
   $("#brandClick").click(function() {
     $('html, body').animate({
         scrollTop: $("#page-footer").offset().top

@@ -2,37 +2,35 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
-
-
-      Example:
-      return queryInterface.bulkInsert('Person', [{
-        name: 'John Doe',
-        isBetaMember: false
-      }], {});
-    */
-    return queryInterface.bulkInsert('Users', [{
-      firstName: 'Bella',
-      lastName: 'Johnson',
-      email: 'bella@yahoo.com',
+     return queryInterface.bulkInsert('Users', [{
+      firstName: 'Stacy',
+      lastName: 'Richardson',
+      email: 'stacy@gmail.com',
       password: '1234',
+      userImage:'../css/imgs/placeholder/profile2.jpg'
+    }, {
+      firstName: 'Luke',
+      lastName: 'Johnson',
+      email: 'luke@gmail.com',
+      password: '123',
       userImage: '../css/imgs/placeholder/profile1.jpg'
-      
-    }]   {});
-
+    }, {
+      firstName: 'Jim',
+      lastName: 'Morris',
+      email: 'jim@gmail.com',
+      password: 'jim',
+      userImage: '../css/imgs/placeholder/profile3.jpg'
+    }, {
+      firstName: 'Rachel',
+      lastName: 'Zoe',
+      email: 'rachel@gmail.com',
+      password: '12345',
+      userImage: '../css/imgs/placeholder/profile4.jpg'
+    }], {}); 
   },
 
-  down: (queryInterface, Sequelize) => {
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
+  down: function (queryInterface, Sequelize) {
 
-      Example:
-      return queryInterface.bulkDelete('Person', null, {});
-    */
-
-    return queryInterface.bulkDelete('Users', null);
+    return queryInterface.bulkDelete('Users', null); 
   }
 };

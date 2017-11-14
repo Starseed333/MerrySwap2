@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-title" content="Merry Swap">
     <meta name="application-name" content="Merry Swap">
     <meta name="theme-color" content="#ffffff">
-    <!--Google Icon Font-->
+    <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!--CSS-->
@@ -20,12 +20,13 @@
     <link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
 
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-    <!-- CSS Style sheet -->
+
     <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <!--website is optimized for mobile-->
+    <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- userView.handlebars -->
+
   </head>
 
   <body>
@@ -54,8 +55,7 @@
   <div class="container" id="maincontainer">
     <div class="row">
 
-      <!-- Handle Bars Sidebar Navigation (image) -->
-
+      <!-- Sidebar Navigation (image) -->
       {{#with loggedUser}}
 
       <div class="col l2">
@@ -82,7 +82,7 @@
         <div>
           <!-- NAME here -->
           <div id="username">
-            <!-- Handlebars -->
+            <!-- handlebars for the first name -->
           <h2>Welcome, {{firstName}}!</h2>
             <h5>Time to get swapping</h5>
             <br>
@@ -104,7 +104,7 @@
             <div class="col s12 m3">
               <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                  <!-- no image tile -->
+
                   <img class="activator" src="{{imageURL}}" onError="this.src='http://elliotts.net/content/images/thumbs/default-image_600.png'">
                 </div>
                 <div class="card-content">
@@ -137,11 +137,10 @@
 
               <div class="card">
 
-                <!--///display the picture of the item via the placeholder/// -->
-<!-- ********************** -->
+                <!--///we can show a picture of the item them own that they would like to swap with you/// -->
+
 
                 <div class="card-image">
-                  <!-- image here -->
                   <img src="../css/imgs/placeholder/desk.jpg">
 
 
@@ -169,18 +168,17 @@
 
               <div class="card">
 
-               <!--///display the picture of the item via the placeholder/// -->
-<!-- ****************** -->
+                <!--///we can show a picture of the item them own that they would like to swap with you/// -->
+
 
                 <div class="card-image">
-                  <!-- image here -->
                   <img src="../css/imgs/placeholder/polaroid_camera.jpg">
 
 
                 </div>
 
                 <div class="card-content">
-                  <p> Bella would like to swap!</p>
+                  <p> Jim would like to swap!</p>
                 </div>
 
                 <div class="card-action">
@@ -197,13 +195,11 @@
       <!-- Swap Modal Structure -->
       <div id="swapAProduct" class="modal">
         <div class="modal-content">
-          <!-- swap button -->
             <button id="clear-modal" class="modal-close btn-flat" style="position:absolute;top:0;right:0;">X</button>
           <h4>Get your swap on!</h4>
           <br>
               <div class="row">
                 <div class="col s12 l5">
-            <!-- *************************** insert image here -->
                 <img src= "../css/imgs/placeholder/nikes.jpg" class="responsive-img" id="wantedProduct">
                 </div>
                 <div class="icon-block col s12 l2">
@@ -212,17 +208,14 @@
               <div class="input-field col s12 l5">
                 <select class="icons">
                   <option value="" selected>What's it worth trading for?</option>
-                  <!-- *************************insert image here -->
                   <option value="1" data-icon="../css/imgs/placeholder/bike_img.jpg" class="left circle data-icon">Bike</option>
-                  <!-- *********************insert image here -->
                   <option value="2" data-icon="../css/imgs/placeholder/makeuppalette.jpg" class="left circle data-icon">MakeUp Palette</option>
-                  <!-- ********************** insert image here -->
                   <option value="3" data-icon="../css/imgs/placeholder/polaroid_camera.jpg" class="left circle data-icon">Polaroid Camera</option>
                 </select>
               </div>
               </div>
+              <!-- modal footer -->
               <div class="row">
-                <!-- modal footer -->
               <div class="modal-footer">
                 <!-- modal submit button -->
                   <button class="btn waves-effect waves-light right" type="submit" name="action" id="finishSwap" onclick ="window.location.href ='/'">Make a Swap!
@@ -238,7 +231,6 @@
         <button id="clearModal" input="reset" class="modal-close btn-flat" type="reset" style="position:absolute;top:0;right:0;">X</button>
         <h4>Post A Product</h4>
         <p>Tell us a bit about what you're swapping</p>
-        <!-- Form Product to post item -->
           <form>
           <div class="row">
             <div class="input-field col s6">
@@ -256,13 +248,12 @@
                 <label class="active" for="imageURL">Input Image URL</label>
               </div>
             </div>
+            <!-- categories here! -->
             <form id="catergory-product" action="#">
-
               <h5>Pick one category for your product</h5>
-              <!-- Categoriess Here!!!!!! -->
               <p>
-                <input class="with-gap" name="category" type="radio" id="beauty" value="Beauty"/>
-                <label for="beauty">Beauty</label>
+                <input class="with-gap" name="category" type="radio" id="beauty" value="Beauty/Health"/>
+                <label for="beauty">Beauty/Health</label>
 
                 <input class="with-gap" name="category" type="radio" id="electronic" value="Electronics"/>
                 <label for="electronic">Electronics</label>
@@ -281,7 +272,7 @@
               </p>
             </form>
             <br>
-            <!-- Product Condition Form -->
+            <!-- product condition form -->
             <form id="radioForm" action="#">
             <h5>What condition is your product in?</h5>
               <p>
@@ -304,7 +295,7 @@
             <br>
 
           </form>
-          <!-- Modal Footer -->
+          <!-- modal footer -->
           <div class="modal-footer">
             <button class="btn waves-effect waves-light left" type="submit" name="action" id="postProduct" onclick ="window.location.href ='/manageView'">Post Your Product
             </button>
@@ -319,22 +310,19 @@
           <h4>CONGRATS!</h4>
           <p>It's is all yours! Be sure to contact the Merry Swap member to make arrangements!</p>
         </div>
-        <!-- Modal Footer -->
+        <!-- modal footer -->
         <div class="modal-footer">
-          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Keep Merry Swapping</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Merry Swapping</a>
         </div>
       </div>
 
-      <!-- Reject Item Modal Structure -->
+      <!-- Reject Modal Structure -->
       <div id="reject" class="modal">
       <div class="modal-content">
-        <!-- Button -->
           <button class="modal-close btn-flat" style="position:absolute;top:0;right:0;">X</button>
-
         <h4>No problem, better swapping next time!</h4>
-        <p>Your item will be returned back to your shop and your friend will be notified! Be sure to check out their shop to see if there is something else you would be willing to trade.</p>
+        <p>Your item will be returned back to your profile and the Merry Swap member will be notified! Be sure to check out their posts to see if there is something else you would be willing to trade.</p>
       </div>
-
       <div class="modal-footer">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Merry Swapping</a>
       </div>
@@ -350,7 +338,7 @@
         <div class="row">
         </div>
       </div>
-      <div class="footer-copyright Merry Swap">
+      <div class="footer-copyright red">
         <div class="container">
         </div>
       </div>
@@ -359,15 +347,10 @@
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <!-- Import JS materialize file -->
       <script type="text/javascript" src="../js/materialize.js"></script>
-      <!-- Import App js file -->
       <script src="../js/app.js"></script>
-    
-
-
       <script type="text/javascript">
-            // Logout onclick function here
+         
           $("#logout").click(function(event){
               event.preventDefault();
              
@@ -376,9 +359,7 @@
                 window.location = "/";
               });
           });
-     
-
-          $('#clearModal').on("click", function() {
+      $('#clearModal').on("click", function() {
           $('#product_name').val('');
           $('#product_description').val('');
           $('#imageURL').val('');
@@ -394,8 +375,6 @@
               UsersId: 1,
               swapStatus: false
             }
-
-            // Ajax
             var currentURL = window.location.origin;
             $.post(currentURL + '/api/newproduct', userInput, function(data) {
        
@@ -404,13 +383,10 @@
             });
             return false;
           });
-
-
           $('#startSwap').on("click", function() {
             alert("testing");
-            
+            //$('#wantedProduct').atr(src, )
           });
-
       </script>
     </body>
 </html>

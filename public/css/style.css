@@ -71,12 +71,14 @@ footer.page-footer .footer-copyright {
 	color: #1b998B !important;
 }
 
+/*yonna*/
 .top-image {
-	height: 650px;
+	height: 900px;
 }
-
+/*yonna*/
 .top-text {
-	padding-top: 125px;
+	padding-top: 5px;
+	
 }
 
 .mid-text {

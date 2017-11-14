@@ -24,7 +24,7 @@
 
       <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-      <!--website is optimized for mobile-->
+      <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <!-- index.handlebars -->
     </head>
@@ -36,20 +36,55 @@
         <!-- Merry Swap Logo -->
         <a id="brandClick" class="brand-logo swap left">Merry Swap</a>
         <ul id="nav-mobile" class="right">
+          <!-- yonna about us -->
         <li><a class="learnMore right">Learn More</a></li>
+        <li><a class="aboutUs right">About Us</a></li>
         <li><a class="modal-trigger right" href="#modal1">Sign Up</a></li>
         <li><a class="modal-trigger right" href="#modal2">Login</a></li>
         </ul>
       </div>
     </nav>
 
-
     <div id="index-banner" class="parallax-container top-image">
+      <!-- yonna slider -->
+      <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="css/imgs/people.jpeg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Tis the Season!</h3>
+          <h5 class="light grey-text text-lighten-3">But didn't get the gift you had in mind?</h5>
+        </div>
+      </li>
+      <li>
+        <img src="css/imgs/gift2.jpeg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Happy Holidays!</h3>
+          <h5 class="light grey-text text-lighten-3">But you prefer a different gift?</h5>
+        </div>
+      </li>
+      <li>
+        <img src="css/imgs/people.jpeg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Joy to the world!</h3>
+          <h5 class="light grey-text text-lighten-3">You can swap your gift today!</h5>
+        </div>
+      </li>
+      <li>
+        <img src="css/imgs/gift2.jpeg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>We wish you a Merry Christmas!</h3>
+          <h5 class="light grey-text text-lighten-3">Get the gift you really want.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+      <!-- ******************************************************************** -->
+
       <div class="container top-text">
-        <!-- header -->
-        <h1 class="header red-text swapTitle center">Merry Swap A place where everyone gets what they want</h1>
+        <h5 class="header red-text swapTitle center">Merry Swap, A place where everyone gets what they want</h5>
           <div class="row center">
-            <h4 class="header white-text col s12 light">A Perfect Place to find what you Love</h4>
+            <h5 class="header red-text col s12 light">A Perfect Place to find what you Love</h5>
           </div>
         <div class="row center">
           <a href="#modal1" id="download-button" class="btn-large waves-effect waves-light lighten-1 modal-trigger">Get Swapping</a>
@@ -92,13 +127,20 @@
         </div>
       </div>
     </div>
-
+<!-- yonna carousel -->
     <div class="parallax-container">
+      <h4 class="center">Choose from items like below....</h4>
   <!-- image goes here -->
-      <div class="parallax"><img src="css/imgs/img.jpg">
-      </div>
+  <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="css/imgs/item1.jpeg"></a>
+    <a class="carousel-item" href="#two!"><img src="css/imgs/item2.jpeg"></a>
+    <a class="carousel-item" href="#three!"><img src="css/imgs/item3.jpeg"></a>
+    <a class="carousel-item" href="#four!"><img src="css/imgs/item4.jpeg"></a>
+    <a class="carousel-item" href="#five!"><img src="css/imgs/item5.jpeg"></a>
+  </div>
+     <!-- <div class="parallax"><img src="css/imgs/img.jpg">  </div>-->
     </div>
-
+<!-- *********************************************************************************** -->
   <!-- Sign Up Modal Structure -->
     <div id="modal1" class="modal">
       <div class="modal-content">
@@ -142,13 +184,55 @@
       </div>
     </div>
 
+<!-- ************************************************************* -->
+  <!-- Sign Up Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <!-- button to clear the signup form -->
+          <button id="clearSignUp" class="modal-close btn-flat" style="position:absolute;top:0;right:0;">X</button>
+        
+        <h4>Create your account</h4>
+        
+        <p>You'll be swapping in minutes!</p>
+        <!-- Create Account Form -->
+          <form>
+          <div class="row">
+            <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+            </div>
+           </div>
+           <div class="row">
+              <div class="input-field col s12">
+                <input id="emailSignUp" type="email" class="validate">
+                <label for="emailSignUp">E-mail</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="passwordSignUp" type="password" class="validate">
+                <label for="passwordSignUp">Password</label>
+              </div>
+            </div> 
+          </form>
+          <div class="modal-footer">
+            <button class="btn waves-effect waves-light left" type="submit" name="action" id="signUp">Sign Up
+            </button>
+          </div>
+      </div>
+    </div>
+
     <!-- Login Modal Structure -->
     <div id="modal2" class="modal">
       <div class="modal-content">
           <button id="clearLogin" class="modal-close btn-flat" style="position:absolute;top:0;right:0;">X</button>
         <h4>Login to your account</h4>
         <p>You'll be swapping in minutes!</p>
-        <!-- login form -->
+        <!-- login form in here -->
           <form>
            <div class="row">
               <div class="input-field col s12">
@@ -166,76 +250,82 @@
           <div class="modal-footer">
             <button class="btn waves-effect waves-light left" type="submit" name="action" id="logIn">Login
             </button>
-
           </div>
       </div>
     </div>
-
+    <!-- yonna updated about me -->
     <footer class="page-footer blue" id="page-footer">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">About Merry Swap</h5>
-            <p class="grey-text text-lighten-4">It's that time of year where everyone is gifting each other gifts. There's always that one gift we get that unfortunately, doesn,t go to use in our homes. Meet Merry Swap, the place where you can find a like minded member who would rather see that item go to use than in a closet collecting dust!</p>
+            <h4 class="white-text">About Merry Swap</h4>
+            <br>
+            <br>
+            <p class="grey-text text-lighten-4">It's that time of year where everyone is gifting each other gifts. There's always that one gift we get that unfortunately, doesn't go to use in our homes or we simply prefer something else. Meet Merry Swap, the place where you can find a like minded member who would rather see that item go to use than in a closet collecting dust! Sign up and start swapping today. Once you create a profile you will be able to browse and post gifts for swapping!</p>
           </div>
           <div class="col l6 s12 right">
-      <!-- image goes here -->
+            <!-- image goes here -->
             <img src="css/imgs/present.jpg">
           </div>
         </div>
       </div>
-      
+      <!-- footer copyright -->
       <div class="footer-copyright red">
         <div class="container">
+            <p>Merry Swap 2017</p>
         </div>
       </div>
     </footer>
 
+    <!-- yonna mp3 -->
+    <div id="player">
+    <audio autoplay hidden>
+        <source src="christmas.mp3" type="audio/mpeg">
+    </audio>
+    </div>
+
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <!-- Import materialez -->
+      <!-- Import materialize -->
       <script type="text/javascript" src="js/materialize.js"></script>
       <!-- Import app.js -->
       <script src="js/app.js"></script>
-      <!-- jquery -->
       <script type="text/javascript">
-          
-        // clear signup form function
-        $('#clearSignUp').on("click", function() {
-              $('#first_name').val('');
-              $('#last_name').val('');
-              $('#email').val('');
-              $('#password').val('');
+
+      //clear signup form function  
+     $('#clearSignUp').on("click", function() {
+          $('#first_name').val('');
+          $('#last_name').val('');
+          $('#email').val('');
+          $('#password').val('');
       });
-    
-        //user signup function
-         $('#signUp').on("click", function() {
-              var userInput = {
-              firstName: $('#first_name').val().trim(),
-              lastName: $('#last_name').val().trim(),
-              email: $('#emailSignUp').val().trim(),
-              password: $('#passwordSignUp').val().trim(),
-              userImage: "https://www.mautic.org/media/images/default_avatar.png"
+   
+      //user signup function
+      $('#signUp').on("click", function() {
+        var userInput = {
+          firstName: $('#first_name').val().trim(),
+          lastName: $('#last_name').val().trim(),
+          email: $('#emailSignUp').val().trim(),
+          password: $('#passwordSignUp').val().trim(),
+          userImage: "https://www.mautic.org/media/images/default_avatar.png"
         }
-        // ajax here
+        //ajax here
         var currentURL = window.location.origin;
         $.post(currentURL + '/api/newuser', userInput, function(data) {
           $('#modal1').closeModal();
           window.location.replace("/users/" + data.id);
         });
-
         return false;
       });
 
-         // login function
+      // login function
       $('#logIn').on("click", function() {
         var userInput = {
           email: $('#emailLogin').val().trim(),
           password: $('#passwordLogin').val().trim()
         }
-        
         var currentURL = window.location.origin;
-        // ajax post method
+        //ajax post method
         $.post(currentURL + '/login', userInput, function(data) {
           if(data.url){
             window.location = data.url;
@@ -245,10 +335,28 @@
             alert("I'm sorry. The website has encountered a server failure.")
           }
         });
-
-
         return false;
       });
+
+            // yonna slider
+    $(document).ready(function(){
+      $('.slider').slider();
+    });
+        // Pause slider
+    $('.slider').slider('pause');
+    // Start slider
+    $('.slider').slider('start');
+    // Next slide
+    $('.slider').slider('next');
+    // Previous slide
+    $('.slider').slider('prev');
+     
+     // **********************************************
+      $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+
+
       </script>
     </body>
   </html>
