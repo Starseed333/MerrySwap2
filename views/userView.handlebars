@@ -295,9 +295,9 @@
             <br>
 
           </form>
-          <!-- modal footer -->
+         <!--  modal footer removed window location -->
           <div class="modal-footer">
-            <button class="btn waves-effect waves-light left" type="submit" name="action" id="postProduct" onclick ="window.location.href ='/manageView'">Post Your Product
+            <button class="btn waves-effect waves-light left" type="submit" name="action" id="postProduct" >Post Your Product
             </button>
           </div>
       </div>
@@ -319,6 +319,7 @@
       <!-- Reject Modal Structure -->
       <div id="reject" class="modal">
       <div class="modal-content">
+
           <button class="modal-close btn-flat" style="position:absolute;top:0;right:0;">X</button>
         <h4>No problem, better swapping next time!</h4>
         <p>Your item will be returned back to your profile and the Merry Swap member will be notified! Be sure to check out their posts to see if there is something else you would be willing to trade.</p>
@@ -379,10 +380,15 @@
             $.post(currentURL + '/api/newproduct', userInput, function(data) {
        
               $('#postAProduct').closeModal();
-              window.location.replace("/manageView");
-            });
+
+
+            //   window.location.replace("/manageView");
+            // });
+            location.reload(forceget);
+          });
             return false;
           });
+
           $('#startSwap').on("click", function() {
             alert("testing");
             //$('#wantedProduct').atr(src, )
