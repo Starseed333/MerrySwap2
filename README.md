@@ -9,14 +9,14 @@ A full stack application with persistent data using MySQL.  The application gree
 
 ### Merry - Swap Demo
 
-* ##### Visit the application here. https://hidden-plains-28710.herokuapp.com/
+* ##### [Visit the application here](https://hidden-plains-28710.herokuapp.com/)
 
 
 ### Contributors
 
-* Yonna George https://github.com/yonnaj
-* Sandra Marquez https://github.com/Starseed333
-* Ismael Barba https://github.com/IsmaelBarba
+* [Yonna George](https://github.com/yonnaj)
+* [Sandra Marquez](https://github.com/Starseed333)
+* [Ismael Barba](https://github.com/IsmaelBarba)
 * Aaron Haile
 
 #### NPM Packages Used
